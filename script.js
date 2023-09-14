@@ -11,6 +11,8 @@ document.querySelector(".gallery-popup span").onclick = () => {
     document.querySelector(".gallery-popup").style.display = "none";
 }
 
+
+// Навигация по сайту
 const anchors = document.querySelectorAll('a[href*="#"]');
 
 for (let anchor of anchors){
