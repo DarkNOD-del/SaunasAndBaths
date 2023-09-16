@@ -28,6 +28,7 @@ body::-webkit-scrollbar-thumb {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    align-items: center;
 }
 
 .header-line{
@@ -40,7 +41,7 @@ body::-webkit-scrollbar-thumb {
 .nav-item{
     color: #fff;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 18px;
     margin-right: 25px;
     transition: color .2s linear;
@@ -55,19 +56,13 @@ body::-webkit-scrollbar-thumb {
 .number-text{
     color: #fff;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 18px;
     transition: color 0.2s linear;
 }
 
 .number-text:hover{
     color: #fce38a;
-}
-
-.phone-text{
-    color: #fff;
-    font-weight: 400;
-    font-size: 14px;
 }
 
 .phone-image{
@@ -217,14 +212,16 @@ body::-webkit-scrollbar-thumb {
 
 .services-cards-section{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: left;
     align-items: center;
     text-align: center;
 }
 
 .services-card{
+    width: 30%;
     min-width: 300px;
-    flex: 1;
+    /* flex: 1; */
     margin: 20px 20px;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
 }
@@ -340,7 +337,6 @@ body::-webkit-scrollbar-thumb {
 
 .gallery-image{
     width: 450px;
-    height: 350px;
     overflow: hidden;
     border-radius: 8px;
 }
@@ -391,6 +387,8 @@ body::-webkit-scrollbar-thumb {
     border-radius: 50%;
     cursor: pointer;
 }
+
+
 
 /* СЕКЦИЯ КОНТАКТЫ */
 
@@ -467,15 +465,19 @@ body::-webkit-scrollbar-thumb {
 .social__icon.instagram:after{
     background-color: #ff5024;
 }
+
 .social__icon.telegram:after{
     background-color: #3b5998;
 }
+
 .social__icon.whatsapp:after{
     background-color: #67b600;
 }
+
 .social__icon.vk:after{
     background-color: #00acee;
 }
+
 .social__icon:hover {
     transform: translateY(-4px);
     box-shadow: 0px 0px 15px #00000080;
@@ -819,6 +821,10 @@ footer nav a:hover{
     .footer-text{
         font-size: 16px;
     }
+
+    .gallery-popup img{
+        width: 500px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -896,12 +902,20 @@ footer nav a:hover{
         margin-top: 260px;
         margin-bottom: 12px;
     }
+
+    .gallery-popup img{
+        width: 400px;
+    }
 }
 
 @media (max-width: 380px) {
     .header-title{
         margin-top: 60px;
         margin-bottom: 12px;
+    }
+
+    .gallery-popup img{
+        width: 300px;
     }
 }
 
