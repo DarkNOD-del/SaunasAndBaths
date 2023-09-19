@@ -2,12 +2,14 @@
 
 document.querySelectorAll(".gallery-image img").forEach(img => {
     img.onclick = () => {
+        document.querySelector(".phone-button").style.display = "none";
         document.querySelector(".gallery-popup").style.display = "block";
         document.querySelector(".gallery-popup img").src = img.getAttribute("src");
     }
 });
 
 document.querySelector(".gallery-popup span").onclick = () => {
+    document.querySelector(".phone-button").style.display = "block";
     document.querySelector(".gallery-popup").style.display = "none";
 }
 

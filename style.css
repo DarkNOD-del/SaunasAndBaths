@@ -18,7 +18,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container {
-    margin: 0px 100px;
+    margin: 0px auto;
+    width: 1170px;
 }
 
 /* СЕКЦИЯ С ЗАГОЛОВКАМИ */
@@ -80,6 +81,10 @@ body::-webkit-scrollbar-thumb {
 
 .header-down{
     position: relative;
+
+    height: 100vh;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .header-title{
@@ -88,8 +93,8 @@ body::-webkit-scrollbar-thumb {
     font-weight: 700;
     text-align: center;
     left: 0;
-    margin-top: 222px;
-    margin-bottom: 12px;
+    /* margin-top: 222px;
+    margin-bottom: 12px; */
 }
 
 .header-suptitle{
@@ -207,21 +212,18 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 90px;
 }
 
 .services-cards-section{
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
 }
 
 .services-card{
-    width: 30%;
-    min-width: 300px;
-    /* flex: 1; */
+    width: 45%;
     margin: 20px 20px;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
 }
@@ -328,7 +330,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Tinos', serif;
     font-size: 26px;
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 }
 
 .gallery-title span{
@@ -336,7 +338,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .gallery-image{
-    width: 450px;
+    width: 26%;
     overflow: hidden;
     border-radius: 8px;
 }
@@ -634,10 +636,10 @@ footer nav a:hover{
 }
 
 .phone-button i {
-        color:#fff;
-        transition:.3s;
-        animation: 1200ms ease 0s normal none 1 running shake;
-        animation-iteration-count: infinite;
+    color:#fff;
+    transition:.3s;
+    animation: 1200ms ease 0s normal none 1 running shake;
+    animation-iteration-count: infinite;
 }
 
 @keyframes shake {
@@ -704,168 +706,116 @@ footer nav a:hover{
 
 /* WIDTH */
 
-@media (max-width: 1280px) {
-
-    /* Хедер */
-    .header-title{
-        position: static;
-        font-size: 40px;
+@media screen and (max-width: 1199px) {
+    .container {
+        width: 960px;
     }
 
-    .header-suptitle{
-        position: static;
-        font-size: 26px;
+    .information-holder {
+        display: block;
     }
 
+    .information-title{
+        width: 100%;
+    }
 
-
-    /* Про бани и сауны */
     .information-desc{
-        text-align: center;
+        width: 100%;
     }
 
     .information-images{
-        display: none;
+        text-align: center;
     }
 
-    .information-title,
-    .information-desc{
-        width: auto;
+    .information-img-1{
+        margin-left: 0;
+        margin-top: 40px;
+        width: 60%;
     }
 
+    .services-card{
+        width: 45%;
+    }
+}
 
+@media screen and (max-width: 991px) {
+    .container {
+        width: 720px;
+    }
 
-    /* Записаться */
+    .cards-holder{
+        display: block;
+        align-items: center;
+    }
+
+    .card{
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .services-card{
+        width: 80%;
+    }
+
+    .appointment{
+        padding: 40px 0px;
+    }
+
     .appointment-holder{
         display: block;
     }
 
-    .left-title, .left-text, .right-button {
+    .right{
+        margin-top: 60px; 
+    }
+
+    .right-button{   
         text-align: center;
     }
 
-    .left-title{
-        font-size: 46px;
+    .right-btn{
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .left-text{
-        font-size: 26px;
+    .left{
         text-align: center;
     }
 
-    .right-button{
-        margin-top: 100px;
+    .gallery-image{
+        width: 45%;
     }
 }
 
-@media (max-width: 1024px) {
-    .cards-holder{
-        display: block;
+@media screen and (max-width: 767px) {
+    .container {
+        width: 540px;
     }
 
-    .card{
-        width: 100%;
-        margin-top: 30px;
-        padding-bottom: 20px;
-    }
-}
-
-@media (max-width: 870px) {
-    .nav, .phone {
-        display: none;
+    .header-line{
+        justify-content: space-between;
     }
 
-    .phone-button {   
-        bottom: 5px; /*отступ кнопки снизу от экрана*/
-        left: 70px; /*отступ кнопки слева от экрана(right - справа)*/
-    }
-}
-
-@media (max-width: 768px) {
-    .information-holder{
-        display: block;
-    }
-
-    .container{
-        margin: auto 40px;
-    }
-}
-
-@media (max-width: 650px) {
-    .information-title,
-    .left-title,
-    .gallery-title,
-    .service-title,
-    .reviews-title,
-    .footer-logo-text{
-        font-size: 40px;
-    }
-
-    .information-desc,
-    .left-text,
-    .gallery-desc,
-    .service-desc,
-    .reviews-subtitle{
-        font-size: 26px;
-    }
-
-    .contacs-title,
-    .socials-title{
-        font-size: 30px;
-    }
-
-    .contacs-text{
-        font-size: 22px;
-    }
-
-    .footer-text{
-        font-size: 16px;
-    }
-
-    .gallery-popup img{
-        width: 500px;
-    }
-}
-
-@media (max-width: 480px) {
-    
-    .container{
-        margin: auto 60px;
+    .nav-item{
+        margin-right: 15px;
     }
 
     .header-title{
-        font-size: 30px;
-    }
-    
-    .information-title,
-    .left-title,
-    .gallery-title,
-    .service-title,
-    .reviews-title,
-    .footer-logo-text{
-        font-size: 32px;
+        font-size: 40px;
     }
 
-    .information-desc,
-    .left-text,
-    .gallery-desc,
-    .service-desc,
-    .reviews-subtitle{
-        font-size: 18px;
+    .header-suptitle{
+        font-size: 26px;
     }
 
-    .contacs-title,
-    .socials-title{
-        font-size: 22px;
+    .information-img-1{
+        width: 80%;
     }
 
-    .contacs-text{
-        font-size: 14px;
+    .services-card{
+        width: 90%;
     }
-
-    .appointment{
-        display: none;
-    } 
 
     .services-card h2{
         margin: 15px 0px;
@@ -885,45 +835,146 @@ footer nav a:hover{
         padding: 0px 10px;
         margin-bottom: 20px;
     }
+}
 
-    .card{
-        width: 249px;
+@media screen and (max-width: 575px) {
+    .container {
+        width: 95%;
     }
 
-    .card-title{
+    .header-line, .nav, .phone{
+        display: none;
+    }
+
+    .header-title{
+        font-size: 30px;
+    }
+
+    .header-suptitle{
+        font-size: 16px;
+    }
+
+    .card{
+        width: 80%;
+    }
+
+    .information-title,
+    .service-title,
+    .gallery-title,
+    .left-title,
+    .reviews-title,
+    .footer-logo-text{
+        font-size: 32px;
+    }
+
+    .information-desc,
+    .service-desc,
+    .gallery-desc,
+    .left-text,
+    .right-btn,
+    .reviews-subtitle,
+    .footer-text{
         font-size: 18px;
     }
 
-    .card-desc{
-        font-size: 15px;
-    }
-
-    .header-title{
-        margin-top: 260px;
-        margin-bottom: 12px;
+    .gallery-image{
+        width: 80%;
     }
 
     .gallery-popup img{
-        width: 400px;
+        width: 90%;
+    }
+
+    .map{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contacs-title,
+    .socials-title{
+        font-size: 20px;
+    }
+
+    .contacs-text{
+        font-size: 16px;
     }
 }
 
-@media (max-width: 380px) {
-    .header-title{
-        margin-top: 60px;
-        margin-bottom: 12px;
+
+@media screen and (max-width: 374px) {
+    .contacs{
+        padding: 40px 0;
     }
 
-    .gallery-popup img{
-        width: 300px;
+    .socials-holder{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social__icon{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
     }
 }
+
 
 /* HEIGHT */
 
-@media (max-height: 550px) {
+@media screen and (max-height: 575px) {
+
+    .header-line, .nav, .phone{
+        display: none;
+    }
+
     .header-title{
-        margin-top: 30px;
-        margin-bottom: 12px;
+        font-size: 40px;
+    }
+
+    .header-suptitle{
+        font-size: 26px;
+    }
+
+    .gallery-popup img{
+        width: 55%;
+    }
+    
+}
+
+@media screen and (max-height: 474px) {
+
+    .nav, .phone{
+        display: none;
+    }
+
+    .header-title{
+        font-size: 32px;
+    }
+
+    .header-suptitle{
+        font-size: 18px;
+    }
+    
+}
+
+@media screen and (max-height: 374px) {
+
+    .nav, .phone{
+        display: none;
+    }
+
+    .header-title{
+        font-size: 32px;
+        margin-top: 40px;
+    }
+
+    .header-suptitle{
+        font-size: 18px;
+    }
+    
+    .gallery-popup img{
+        width: 45%;
     }
 }
