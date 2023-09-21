@@ -27,3 +27,29 @@ for (let anchor of anchors){
         });
     });
 }
+
+
+// Бургер меню
+function burgerClick(x) {
+    x.classList.toggle("change");
+
+    if (document.getElementById("burger-overlay").style.height == "100%")
+    {
+        document.getElementById("burger-overlay").style.height = "0%";
+        document.querySelector("body").style.overflow = "auto"
+    }
+    else {
+        document.getElementById("burger-overlay").style.height = "100%";
+        document.querySelector("body").style.overflow = "hidden"
+    }
+}
+
+const burger_btns = document.querySelectorAll('.burger-menu-btn');
+
+for (let burger_btn of burger_btns){
+    burger_btn.addEventListener("click", function(event) {
+        document.querySelector(".burger-menu").classList.toggle("change");
+        document.getElementById("burger-overlay").style.height = "0%";
+        document.querySelector("body").style.overflow = "auto"
+    });
+}

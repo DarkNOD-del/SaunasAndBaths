@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-link=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="style.css">
     
@@ -41,6 +41,12 @@
                             <a href="tel:+79529470909" class="number-text">+7 999 999 99 99</a>
                         </div>
                     </div>   
+                </div>
+
+                <div class="burger-menu" onclick="burgerClick(this)">
+                    <div class="burger-menu-line bar1"></div>
+                    <div class="burger-menu-line bar2"></div>
+                    <div class="burger-menu-line bar3"></div>
                 </div>
             </div>
 
@@ -349,18 +355,21 @@
 
 
     <footer>
-        <nav>
-            <a href="#services">ЗАЛЫ</a>
-            <a href="#contacs">КОНТАКТЫ</a>
-            <a href="#reviews">ОТЗЫВЫ</a>
-        </nav>
-
         <div class="footer-logo">
             <div class="footer-logo-text">ПАВЛОВСКИЕ БАНИ</div>
         </div>
 
         <div class="footer-text">Лучший отдых в наших саунах и банях, 123456, г.Новосибирск, ул. Центральная 1, офис 1, ИНН 1234567890 ОГРН 123456789012</div>
     </footer>
+
+    <div id="burger-overlay" class="burger-overlay">
+        <div class="overlay-content">
+            <div class="burger-menu-header">МЕНЮ</div>
+            <a href="#services" class="burger-menu-btn">ЗАЛЫ</a>
+            <a href="#contacs" class="burger-menu-btn">КОНТАКТЫ</a>
+            <a href="#reviews" class="burger-menu-btn">ОТЗЫВЫ</a>
+        </div>
+    </div>
 
     <div class="phone-button"><a href="tel:+79529470909" title="Позвонить"><i class="fa fa-phone-alt"></i></a></div>    
 
